@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "main-aspect-376601",
+  "private_key_id": "c5860dbe978e109331b4b942bb6c628bbee14e9d",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDVE8TjjFaoqZoJ\nQagY/ktDn1ebxbhZsqkBXRrpnS/zcyDhTUz37A/HUWQAylFaqdPcLjpH9FxSeDSi\nNrbAnNndm+O0vmpvo/lH04H/bzpCKcXkm1U33U2bMgz0KNzdKHq3Hxy7zUt553HY\ntadUIC5YxqO/Ma/ZFdnQ7DPvLMC4ijHzBmN+G5hHI8MlxmYQDHTavj8dc3V8HpQy\n80Eqf3aTstetTlCn3PtYf8xlx7PAQ6xD69iSeaFi7DIlS4U1YqV5YzytQ8AS/UDf\ne8zywLkUgIg1ydomhlYxpyQjVnJdDT7eZfrkwws9jv99YuyeYxfLVALuzQiGaxr9\nAU080qzlAgMBAAECggEAPzh3YaCBEdgImRh+/LNut2iuwMxAb3TACmSKmKgH0y7k\noZSi8qh64gO3LTjaPJFJB/o7VqAdSGbcDwk23h1r0wHu5PDeebNoQjRyTMy+t2TX\nj4W7GjEyVoraJxN8vK3HA1Ba4Sn/a/MM52S2ehJ2TebaLN9cMof2MbPzkNJxeA8W\nNdpCpjx07iZCBW+oNlbai6hIZ0AMpm30ETBgmO69suHxSOzLLnD3dJKiZHkOJ8Ai\nazcIrCw1skhyeBrzaL610yy8U7hJ3VeXzIiX3oSGFgDvlDGGUgguUddxAdG6mBS9\nZbakSMVS17YBhtM1h/pr984Hz438t/jmru+Gr7EMvQKBgQDuLpd+cFlr/xlZoMJ5\nhONnSgMpvVHs625Zp+bKXRZ19Bh6XE2293xryC4F/pYuaiWSW5l1O3NNKZ2UgHw3\n6INIS08uYt83+158X+55ex9GtWHcGdBCDYgF05n5PEyCCpx3+m8Zl6aGGk3Y0w43\nJF9rDWpkUY8GpCfv2f7LGb6BnwKBgQDlBGW5nWC1MWTQ+hKU5uii8hqY4+WbLLdO\nGt/IolDIdw73vAJZlXcdSBEe2K+Y1jnFw2MYqdYUaws5xwVdf2ZGXbCjQ3kJF1MU\nA+Xlqru64RnVPHB4ahyTkB9TF8RoPAP8RRxjXowncIYbopEbVZmCnBqgQ+5kmRuL\nnVAi20qq+wKBgBnHNyQ7GqKCoIa/zGyEgmwqaX85+0TuEipn7qWWP5kSixerJ8oW\nrQOpTbneXPi3Ckv11/0FKyx9xY1N/qO6aYMIi5BUqR4Q+Z/ybgf92Fu5w9ajgJO1\njTQ8O5zq9sjYRykBFMcrT52R+TzvUsmLCTy33fzvitBIMf5WlKn8pk63AoGBAM8m\nFhk5l/Ls1aMMv2f+IOjakmI+qT2dycQVHNvuraFVx60fWwTK5C4RNKMxHkvhYepW\n3Di/zkszs7i0I0854Dm/nvleG4m0lknhaL4/m4Ti/SnafGT+nhB/aUYQlnAt8PDr\nVk0vhRhbeIJgnl4aJDt2lcLnDyfhMYAscALHVhenAoGAfRbagHjjdz51MLb+9nV+\ntKz0iJX8rM6IuExltpvrvcLAhKqPSFcLrF6gU1U+YBc//tuGATjz1ZJpMjFcUpAK\nVKCeBpChUP2z3tPSb1CqbyXmFtyhvZEyFEvRs+5kQI11NuN3uIlc9lOHlvHRnFFZ\nQOjmy7o1N6NQTF61YzOD0mo=\n-----END PRIVATE KEY-----\n",
+  "client_email": "blogprojectdrf-service-account@main-aspect-376601.iam.gserviceaccount.com",
+  "client_id": "104351645652079387250",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/blogprojectdrf-service-account%40main-aspect-376601.iam.gserviceaccount.com"
+}

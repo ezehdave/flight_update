@@ -1,0 +1,242 @@
+{% extends "main.html"%}
+{% load static %}
+{% block content %}
+<style>
+
+
+.col-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+   text-align:center;
+   margin:10px
+
+
+
+}
+
+.col {
+
+   padding:20px 10px;
+  text-align:center;
+}
+.color{
+    background-color:#efefef;
+}
+
+</style>
+
+	<!--PreLoader-->
+    <div class="loader">
+        <div class="loader-inner">
+            <div class="circle"></div>
+        </div>
+    </div>
+    <!--PreLoader Ends-->
+
+
+	<!-- header -->
+<nav class="navbar navbar-expand-lg navbar-light  fixed-top " style="background-color:#051922  ;">
+ <a style=" color: #F28123;" class="navbar-brand" href="#"><span style="color:white; font-size:30px;" ><i class="fa-solid fa-truck-plane"> SPD </i></span><b>Shipment Courier</b></a>
+  <button style="background-color:#F28123;" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span  class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+
+        <li class="current-list-item"><a  style=" color: white; margin: 20px"  style=" color: #F28123;" href="{% url 'home' %}"><b>Home</b></a></li>
+		<li><a style=" color: white; margin: 20px" href="{% url 'about' %}"><b>About Us</b></a></li>
+
+        <li><a style=" color: white; margin: 20px"href="{% url 'contact' %}"><b>Contact Us</b></a></li>
+		<li><a style=" color: white; margin: 20px" href="{% url 'ship_a_parcel' %}"><b>Ship a Parcel</b></a>
+		<li><a style=" color: #F28123; margin: 20px" href="{% url 'track_a_parcel' %}"><b>Track a parcel</b></a>
+	</li>
+		<li>
+			<a style=" color: white; margin: 20px" href="{% url 'services' %}"><b>Services</b></a>
+		</li>
+		<li>
+
+				<a style=" color: white; margin: 20px" class="mobile-hide shopping-cart" href="{% url 'faqs' %}"><b>FAQs</b></i></a>
+
+		</li>
+
+		<li>
+
+				<a  style=" color: white; margin: 20px" class="mobile-hide shopping-cart" href="{% url 'make_payment' %}"><b>Make payment</b></i></a>
+
+		</li>
+
+    </ul>
+      <span>
+		    {% if user.is_authenticated %}
+		<li ><a style="color:white;" href="{% url 'logout' %}"><b>Logout</b></a></li>
+      {%else%}
+		<li ><a style="color:white;" href="{% url 'login' %}"><b>Login</b></a></li>
+      {% endif %}
+
+    </span>
+  </div>
+</nav>
+	<!-- end header -->
+
+
+		<!-- breadcrumb-section -->
+		<div class="breadcrumb-section breadcrumb-bg">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 offset-lg-2 text-center">
+						<div class="breadcrumb-text">
+							<p>You Can Track And See Your Parcel Details</p>
+
+							<h1>TRACK A PARCEL</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end breadcrumb section -->
+		<!-- error section -->
+	<div class="latest-news pt-150 pb-150">
+		<div class="container">
+<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="section-title">
+						<h3><span class="orange-text">Enter </span> The Consignment No.</h3>
+						<h4>Ex: 0000000000.000000</h4>
+						<form action="" method="POST" id="fruitkha-contact" >
+							                    {% csrf_token %}
+                            <div class="form-title">
+
+
+					</div>
+							<p>
+								<input style="margin:15px 0px; padding:5px 10px" type="text" placeholder="Enter Tracking Id" name="tracking_id" id="name">
+								<input type="submit" value="Track result" name="email" id="Track">
+							</p>
+								 {% if messages %}
+							<div class="alert" style="margin:10px 0px;">
+								{% for message in messages %}
+                                  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                                 <strong>Sorry  {{message}}</strong>
+                             </div>
+
+                             {% endfor %}
+
+								   {% endif %}
+
+
+
+							<div style="background-color:#efefef; padding:10px; margin:20px 0px">
+								<h4>Delivery Details</h4>
+							</div>
+                                     <div class="col-container">
+										  <div class="col " >
+											  <h5>Senders Details</h5>
+											  <h6>{{results.senders_name }}</h6>
+											  <h6>{{results.senders_phone_no }}</h6>
+
+
+										  </div>
+
+
+
+										  <div class="col" >
+												<h5>Receivers Details</h5>
+										   <h6>{{results.receivers_name}} </h6>
+											   <h6>{{results.receivers_phone_no}} </h6>
+
+										  </div>
+										</div>
+
+
+                                     <div class="col-container color">
+											 	  <div class="col " >
+											  <h5>Senders Address</h5>
+											  <h6>{{results.senders_address}}</h6>
+											  <h6>{{results.senders_email  }}</h6>
+
+
+										  </div>
+
+
+
+										  <div class="col" >
+												<h5>receivers Address</h5>
+										   <h6>{{results.receivers_address}} </h6>
+											   <h6>{{results.receivers_email}} </h6>
+
+										  </div>
+										</div>
+							<div style="background-color:#efefef; padding:10px; margin:20px 0px">
+								<h4>Parcel Details</h4>
+							</div>
+
+                                    <div class="col-container">
+										  <div class="col " >
+											  <h5>Estimated_Weight</h5>
+											  <h6>{{results.Estimated_parcels_weight }}</h6>
+
+
+
+										  </div>
+
+
+
+										  <div class="col" >
+												<h5>Delivery Status</h5>
+										   <h6>{{results.status}} </h6>
+
+
+										  </div>
+										</div>
+
+						</form>
+
+						<div class="container">
+							<div style="background-color:rgb(6,150,215); padding:20px 10px; margin:20px 0px; color:white;" >
+								<h6 style="color:white;"><b>Tracking ID: {{results.tracking_id }}</b></h6>
+								<h6 style="color:white;"><b>Shipment Status: {{results.status }}<b/></h6>
+							</div>
+
+							<div style="background-color:#efefef; padding:10px; margin:20px 0px">
+								<h4>Delivery destination</h4>
+							</div>
+
+							{% for post in destination %}
+  <!-- completed -->
+    <div class="step active" style="text-align: start;">
+      <div class="v-stepper">
+        <div class="circle"></div>
+        <div class="line"></div>
+      </div>
+
+      <div class="content">
+       <h5>{{post.location}}</h5>
+	   <p>{{post.address}}</p>
+	   <p>{{post.date}}</p>
+      </div>
+  </div>
+							{% endfor %}
+
+
+
+
+
+
+
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+
+	<!-- end cart -->
+		<!-- end error section -->
+
+{% include "footer.html" %}
+
+{% endblock content %}
