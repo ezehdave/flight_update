@@ -147,49 +147,45 @@ class EmploymentForm(ModelForm):
         super().__init__(*args, **kwargs)
         self.fields['applicants_name'].widget.attrs.update({
             'required': "",
-            'placeholder': "applicants name",
+            'placeholder': "Applicants Name",
             'name': "name",
         })
         self.fields['applicants_email'].widget.attrs.update({
             'required': "",
-            'placeholder': "applicants email",
+            'placeholder': "Applicants Email",
             'name': "email",
         })
         self.fields['applicants_phone_no'].widget.attrs.update({
             'required': "",
-            'placeholder': "applicants phone no",
+            'placeholder': "Applicants Phone no",
             'name': "email",
         })
         self.fields['applicants_address'].widget.attrs.update({
             'required': "",
-            'placeholder': "applicants address",
+            'placeholder': "Applicants Address",
             'name': "email",
         })
         self.fields['applicants_state'].widget.attrs.update({
             'required': "",
-            'placeholder': "applicants state ",
+            'placeholder': "Applicants State ",
             'name': "email",
         })
         self.fields['applicants_city'].widget.attrs.update({
             'required': "",
-            'placeholder': "applicants city",
+            'placeholder': "Applicants City",
             'name': "email",
         })
         self.fields['applicants_zip'].widget.attrs.update({
             'required': "",
-            'placeholder': "applicants zip",
+            'placeholder': "Applicants Zip",
             'name': "email",
         })
         self.fields['applicants_ssn'].widget.attrs.update({
             'required': "",
-            'placeholder': "applicants ssn or ID",
+            'placeholder': "Applicants SSN or ID",
             'name': "email",
         })
-        self.fields['upload_id'].widget.attrs.update({
-            'required': "",
-            'placeholder': "receivers_Zip_code",
-            'name': "email",
-        })
+        
         self.fields['upload_id'].widget.attrs.update({
             'required': "",
             'cols':"30",
