@@ -84,12 +84,15 @@ WSGI_APPLICATION = 'flight.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'D2adfeCCfCbaG6a6CBb566CEaa4e43bC',
+        'HOST': 'monorail.proxy.rlwy.net',
+        'PORT': '17170',
+
     }
 }
-
-
 
 CORS_ORIGIN_ALLOW_ALL = True
 [
